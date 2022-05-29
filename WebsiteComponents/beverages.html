@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Beverages and Desserts</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <img class="logo" src="ProyekFinal-LogoINLINECAFE.png" />
+      <div id="cringeQuote">
+        <h2>Remember to get in line!</h2>
+      </div>
+      <div class="navbar">
+        <img class="hamburger-btn" src="hamburgermenu.png" />
+        <p class="del-fee">Delivery is always 100% free!</p>
+        <div class="drop-down">
+            <div class="drop-down-box">
+               <a href="index.html" class="drop-text"><p>Home</p></a>
+            </div>
+            <div class="drop-down-box">
+               <a href="beverages.html" class="drop-text"><p>Beverages</p></a>
+            </div>
+            <div class="drop-down-box">
+               <a href="beverages.html#desserts-sec" class="drop-text"><p>Desserts</p></a>
+            </div>
+            <div class="drop-down-box">
+               <a href="ContactUs.html" class="drop-text"><p>Contact us</p></a>
+            </div>
+        </div>
+      </div>
+
+      <!--BEVERAGES: MORE LIKE BEVERLY HILLS-->
+
+      <div class="beverage-title">
+        <h1 class="bev-text">BEVERAGES</h1>
+      </div>
+      <div id="shopping-cart">
+        <p id="shop-title">Your shopping cart</p>
+        <p id="items-ordered">0 items ordered</p>
+        <button id="cart-btn">Checkout</button>
+      </div>
+      <!--POP UP-->
+      <div class="pop-ups" id="pop-up">
+        <div class="pop-up-checkout">
+          <span class="close-pop-up">&times;</span>   
+          <h1 id="checkout-title">Checkout</h1>
+          <p id = "order-ind">You have ordered 0 item(s).</p>
+          <h4>Your order:</h4>
+          <p id="order-info">You haven't ordered anything yet.<br /></p>
+          <h3 id="subtotal-info"></h3>
+          <br/>
+          <h2>Recipient details</h2><br/>
+          <p>Full Name</p>
+          <input id = "person-name" type = "text" name="Recipient name" placeholder="John Brown"/>
+          <p>Email</p>
+          <input id = "person-email" type = "email" name="Recipient email" placeholder="john@example.com"/>
+          <p>City</p>
+          <input id = "person-city" type = "text" name="Recipient city" placeholder="Jakarta"/>
+          <p>Address</p>
+          <input id = "person-address" type = "text" name="Recipient address" placeholder="Jl. Senang Suka 5"/>
+          <p>Payment Method</p>
+          <input id = "payment-visa" type = "radio" name="payment" onclick="hideAndShowVISA()"/>
+          <label for="payment1">VISA</label><br/><br/>
+          <input id = "payment-paypal" type = "radio" name="payment" onclick="hideAndShowPAYPAL()"/>
+          <label for="payment1">PayPal</label><br/><br/>
+          <div id = "payment-form-visa" style="display: none">
+            <p>Card Number</p>
+            <input id = "fill-card" type = "text" placeholder="1234-5678-9108-6969"/>
+            <p>Card Expiration Date</p>
+            <input id = "date-card" type = "text" placeholder="mm/yyyy"/>
+            <script src="button.js"></script>
+          </div>
+          <div id = "payment-form-paypal" style="display: none">
+              <p>PayPal email</p>
+              <input id = "fill-paypal" type = "email" placeholder="paybuddy@email.com"/>
+              <script src="validation.js"></script>
+            </div>
+          <button id = "buy-stuff" onclick="orderPlaced()">Place order</button>
+          <script src="button.js"></script>
+        </div>
+      </div>
+      <h2 class="teas-title">Teas</h2>
+      <div class="drink1">
+        <img class="drink1-img" src="bobamilktea.png" />
+        <h3 class="drink1-text">Boba Milk Tea</h3>
+        <p class="drink1-desc">
+          Fresh boba milk tea made using 100% organic components. Freshly made
+          boba which makes the texture nice and chewy along with our fresh
+          homemade tea. <br /><br /><br />
+          Rp 22.000
+        </p>
+        <div class="order-1">
+          <button class="min1" onclick="decrease1()">-</button>
+          <button class="plus1" onclick="increase1()">+</button>
+          <p id="ind1">0</p>
+          <script src="button.js"></script>
+        </div>
+      </div>
+      <div class="drink2">
+        <img class="drink2-img" src="thaitea.png" />
+        <h3 class="drink2-text">Thai Tea</h3>
+        <p class="drink2-desc">
+          Authentic thai tea made using 100% organic components. The combination
+          of strongly-brewed tea, dairy and sugar make it a perfect complement
+          to hot weather. <br /><br /><br />
+          Rp 17.000
+        </p>
+        <div class="order-2">
+          <button class="min2" onclick="decrease2()">-</button>
+          <button class="plus2" onclick="increase2()">+</button>
+          <p id="ind2">0</p>
+          <script src="button.js"></script>
+        </div>
+      </div>
+      <div class="drink3">
+        <img class="drink3-img" src="lemontea.png" />
+        <h3 class="drink3-text">Lemon Tea</h3>
+        <p class="drink3-desc">
+          Funky lemon tea made using 100% organic components. The breeze of air
+          through every sip will make a smile on your face. <br /><br /><br />
+          Rp 16.000
+        </p>
+        <div class="order-3">
+          <button class="min3" onclick="decrease3()">-</button>
+          <button class="plus3" onclick="increase3()">+</button>
+          <p id="ind3">0</p>
+        </div>
+      </div>
+      <h2 class="coffee-title">Coffees</h2>
+      <div class="drink4">
+        <img class="drink4-img" src="coffeelatte.png" />
+        <h3 class="drink4-text">Coffee Latte</h3>
+        <p class="drink4-desc">
+          The gentle coffee taste and creamy flavouring makes it a coffee loved
+          by even the most casual coffee enjoyers. <br /><br /><br />
+          Rp 25.000
+        </p>
+        <div class="order-4">
+          <button class="min4" onclick="decrease4()">-</button>
+          <button class="plus4" onclick="increase4()">+</button>
+          <p id="ind4">0</p>
+        </div>
+      </div>
+      <div class="drink5">
+        <img class="drink5-img" src="blackcoffee.png" />
+        <h3 class="drink5-text">Black Coffee</h3>
+        <p class="drink5-desc">
+          Freshly brewed coffee without any added flavors, cream, or sugar.
+          Suitable to those who seek the original coffee tang.
+          <br /><br /><br />
+          Rp 18.000
+        </p>
+        <div class="order-5">
+          <button class="min5" onclick="decrease5()">-</button>
+          <button class="plus5" onclick="increase5()">+</button>
+          <p id="ind5">0</p>
+        </div>
+      </div>
+
+      <!--DESSERT: THEY CAN IMITATE YOU BUT THEY CAN'T DUPLICATE YOU-->
+
+      <div id = "desserts-sec">
+        <div class="beverage-title">
+          <h1 class="bev-text">DESSERTS</h1>
+        </div>
+        <div id="view-shopping-cart">
+          <p id="message-view-shopping">View shopping cart</p>
+          <p id="message-view-shopping-tip">Click "view" to go to the shopping cart.</p>
+          <a id="go-up-button" href = "#shopping-cart">View</a>
+        </div>
+        <h2 class="teas-title">Cakes</h2>
+        <div class="drink1">
+          <img class="dessert1-img" src="choccake.png" />
+          <h3 class="drink1-text">Chocolate Cake</h3>
+          <p class="drink1-desc">
+            Freshly baked chocolate cake made with our homemade cocoa beans topped
+            with homemade chocolate cream, suitable for chocolate lovers.
+            <br /><br /><br />
+            Rp 45.000
+          </p>
+          <div class="order-6">
+            <button class="min6" onclick="decrease6()">-</button>
+            <button class="plus6" onclick="increase6()">+</button>
+            <p id="ind6">0</p>
+            <script src="button.js"></script>
+          </div>
+        </div>
+        <div class="drink2">
+          <img class="dessert2-img" src="redvelvetcake.png" />
+          <h3 class="drink2-text">Red Velvet Cake</h3>
+          <p class="drink2-desc">
+            An eye-catching fluffy cake with its striking red color. Made mostly
+            of buttermilk with addition of cocoa powder and bit of vinegar.
+            <br /><br /><br />
+            Rp 52.000
+          </p>
+          <div class="order-7">
+            <button class="min7" onclick="decrease7()">-</button>
+            <button class="plus7" onclick="increase7()">+</button>
+            <p id="ind7">0</p>
+            <script src="button.js"></script>
+          </div>
+        </div>
+        <div class="drink3">
+          <img class="dessert3-img" src="cheesecake.png" />
+          <h3 class="drink3-text">Classic Cheesecake</h3>
+          <p class="drink3-desc">
+            All time favorite classic cheesecake befitting in any situation. The
+            cheesy flavor complements well with a cup of tea/coffee.
+            <br /><br /><br />
+            Rp 42.000
+          </p>
+          <div class="order-8">
+            <button class="min8" onclick="decrease8()">-</button>
+            <button class="plus8" onclick="increase8()">+</button>
+            <p id="ind8">0</p>
+            <script src="button.js"></script>
+          </div>
+        </div>
+        <h2 class="coffee-title">Cookies</h2>
+        <div class="drink4">
+          <img class="dessert4-img" src="choccookies.png" />
+          <h3 class="drink4-text">Chocolate Chip Cookies</h3>
+          <p class="drink4-desc">
+            Cookies with a deep toasty flavor fused with semi-sweet chocolate
+            chips that melts in your mouth. Comes with 4 in the box.
+            <br /><br /><br />
+            Rp 30.000
+          </p>
+          <div class="order-9">
+            <button class="min9"  onclick="decrease9()">-</button>
+            <button class="plus9" onclick="increase9()">+</button>
+            <p id="ind9">0</p>
+            <script src="button.js"></script>
+          </div>
+        </div>
+        <div class="drink5">
+          <img class="dessert5-img" src="almondcookies.png" />
+          <h3 class="drink5-text">Almond Cookies</h3>
+          <p class="drink5-desc">
+            Cookies made of many almond components, a great deal to those who seek
+            nutty flavor in their cookies! Comes with 4 in the box.
+            <br /><br /><br />
+            Rp 30.000
+          </p>
+          <div class="order-10">
+            <button class="min10" onclick="decrease10()"">-</button>
+            <button class="plus10" onclick="increase10()">+</button>
+            <p id="ind10">0</p>
+            <script src="button.js"></script>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p class="contact-us-text">Caffein Line</p>
+        <p>(021) 452 6969420</p>
+        <p>Jl. Boulevard Raya No.10, RT.3/RW.14, Pegangsaan Dua,</p>
+        <p>Kec. Klp. Gading, Kota Jkt Utara,</p>
+        <p>Daerah Khusus Ibukota Jakarta 14240</p>
+        <a class="logos" href="https://www.facebook.com">
+          <img class="fb-logo" src="facebookWhite.png" />
+        </a>
+        <a class="logos" href="https://www.instagram.com">
+          <img class="ig-logo" src="instaWhitepng.png" />
+        </a>
+        <a class="logos" href="https://www.whatsapp.com">
+          <img class="wa-logo" src="whatsAppWhitepng.png" />
+        </a>
+        <p>© 2021 Caffein Line | All Rights Reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>

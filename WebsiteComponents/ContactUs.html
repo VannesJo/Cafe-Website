@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <img class="logo" src="ProyekFinal-LogoINLINECAFE.png" />
+      <div id="cringeQuote">
+        <h2>Remember to get in line!</h2>
+      </div>
+      <div class="navbar">
+        <img class="hamburger-btn" src="hamburgermenu.png" />
+        <p class="del-fee">Delivery is always 100% free!</p>
+        <div class="drop-down">
+          <div class="drop-down-box">
+            <a href="index.html" class="drop-text"><p>Home</p></a>
+          </div>
+          <div class="drop-down-box">
+            <a href="beverages.html" class="drop-text"><p>Beverages</p></a>
+          </div>
+          <div class="drop-down-box">
+            <a href="desserts.html" class="drop-text"><p>Desserts</p></a>
+          </div>
+          <div class="drop-down-box">
+            <a href="ContactUs.html" class="drop-text"><p>Contact us</p></a>
+          </div>
+        </div>
+      </div>
+      <div class="beverage-title">
+        <h1 class="bev-text">CONTACT US</h1>
+      </div>
+      <div class="CUBOX">
+        <form>
+          <label for="namefirst">First Name</label>
+          <input
+            type="text"
+            id="namefirst"
+            name="firstname"
+            placeholder="Bryan"
+          />
+
+          <label for="namelast">Last Name</label>
+          <input type="text" id="namelast" name="lastname" placeholder="Daud" />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="emailperson"
+            placeholder="bryanganteng@email.com"
+          />
+
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="hello.."
+            style="height: 250px;"
+          ></textarea>
+
+          <input
+            id="submit-button"
+            type="button"
+            value="Submit"
+            onclick="submitForm()"
+          />
+          <script src="validation.js"></script>
+        </form>
+      </div>
+      <div class="footer">
+        <p class="contact-us-text">Caffein Line</p>
+        <p>(021) 452 6969420</p>
+        <p>Jl. Boulevard Raya No.10, RT.3/RW.14, Pegangsaan Dua,</p>
+        <p>Kec. Klp. Gading, Kota Jkt Utara,</p>
+        <p>Daerah Khusus Ibukota Jakarta 14240</p>
+        <a class="logos" href="https://www.facebook.com">
+          <img class="fb-logo" src="facebookWhite.png" />
+        </a>
+        <a class="logos" href="https://www.instagram.com">
+          <img class="ig-logo" src="instaWhitepng.png" />
+        </a>
+        <a class="logos" href="https://www.whatsapp.com">
+          <img class="wa-logo" src="whatsAppWhitepng.png" />
+        </a>
+        <p>© 2021 Caffein Line | All Rights Reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>
